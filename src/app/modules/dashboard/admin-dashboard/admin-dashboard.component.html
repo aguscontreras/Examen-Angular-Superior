@@ -1,1 +1,13 @@
-<p>admin-dashboard works!</p>
+<h1 class="mat-display-2 mt-5">Dashboard Administrador</h1>
+
+<main class="row">
+  <section class="col-lg-3">
+    <article>
+      <app-card-dashboard [loggedUser]="user$ | async"></app-card-dashboard>
+    </article>
+  </section>
+
+  <section class="col-lg-8">
+    <app-form-dashboard [loggedUser]="user$ | async"></app-form-dashboard>
+  </section>
+</main>
