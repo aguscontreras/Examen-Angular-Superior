@@ -1,0 +1,64 @@
+<main class="row">
+  <section class="col-lg-5">
+    <div class="d-none d-lg-flex justify-content-center pt-5">
+      <img
+        src="assets/img/sign_up.svg"
+        alt="Ilustración: login"
+        class="frontpage-illustration"
+      />
+    </div>
+  </section>
+  <section class="col-lg-4 offset-lg-1 pt-5 pt-lg-5">
+    <h1 class="mat-display-3">Registrarme</h1>
+    <h3>Por favor, completá el siguente formulario para registrarte.</h3>
+
+    <form class="form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="field-full-width" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" />
+        <mat-error *ngIf="f['email'].invalid"
+          >Este campo es requerido.</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field class="field-full-width" appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input matInput type="password" formControlName="password" />
+        <mat-error *ngIf="f['password'].invalid"
+          >Este campo es requerido.</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field class="field-full-width" appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input matInput type="text" formControlName="firstname" />
+        <mat-error *ngIf="f['firstname'].invalid"
+          >Este campo es requerido.</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field class="field-full-width" appearance="outline">
+        <mat-label>Apellido</mat-label>
+        <input matInput type="text" formControlName="lastname" />
+        <mat-error *ngIf="f['lastname'].invalid"
+          >Este campo es requerido.</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field class="field-full-width" appearance="outline">
+        <mat-label>Edad</mat-label>
+        <input matInput type="number" formControlName="age" />
+        <mat-error *ngIf="f['age'].invalid">Este campo es requerido.</mat-error>
+      </mat-form-field>
+
+      <p>
+        Ya estás registrado/a?
+        <a [routerLink]="['/auth/login']">Iniciá sesión</a>
+      </p>
+
+      <button mat-flat-button type="submit" color="primary" class="mt-4">
+        Crear cuenta
+      </button>
+    </form>
+  </section>
+</main>
