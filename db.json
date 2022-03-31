@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "email": "a.contreras@mail.com",
+      "password": "$2a$10$pbjNmIIzW3cQfpodxSxtN.G8.73HG6yT6Cn80Ej59Jhn3HNRt1UYy",
+      "firstname": "Agustin",
+      "lastname": "Contreras",
+      "role": "admin",
+      "id": 1
+    },
+    {
+      "email": "u.contreras@mail.com",
+      "password": "$2a$10$JhA478Gfjxb/tLqRTRv7c.9cAYkMrbfXp9WYSNMGn9cHU0sKI/RGK",
+      "firstname": "Ulises",
+      "lastname": "Contreras",
+      "role": "user",
+      "id": 2
+    },
+    {
+      "email": "w.contreras@mail.com",
+      "password": "$2a$10$dRyTPuf8zG5dcDUJMpEnhOM7ngE6GoCmQoQ.7iwzb/lELCB1C8D8a",
+      "firstname": "Wilson",
+      "lastname": "Contreras",
+      "role": "user",
+      "id": 3
+    }
+  ]
+}
