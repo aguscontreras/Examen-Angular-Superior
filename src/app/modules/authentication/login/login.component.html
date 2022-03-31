@@ -13,7 +13,7 @@
     <h3>Por favor, inicie sesión para continuar.</h3>
 
     <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <mat-form-field class="field-full-width" appearance="fill">
+      <mat-form-field class="field-full-width" appearance="outline">
         <mat-label>Email</mat-label>
         <input matInput type="email" formControlName="email" />
         <mat-error *ngIf="f['email'].invalid"
@@ -21,7 +21,7 @@
         >
       </mat-form-field>
 
-      <mat-form-field class="field-full-width" appearance="fill">
+      <mat-form-field class="field-full-width" appearance="outline">
         <mat-label>Contraseña</mat-label>
         <input matInput type="password" formControlName="password" />
         <mat-error *ngIf="f['password'].invalid"
@@ -30,6 +30,8 @@
       </mat-form-field>
 
       <p><mat-checkbox formControlName="remember">Recordarme</mat-checkbox></p>
+
+      <p>¿No estás registrado/a? <a [routerLink]="['/auth/signup']">Creá una cuenta</a></p>
 
       <button mat-flat-button type="submit" color="primary" class="mt-4">
         Ingresar al sitio
