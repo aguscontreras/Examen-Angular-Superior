@@ -20,15 +20,13 @@ export class AuthenticationService {
 
   constructor(private http: HttpClient) {
     this.apiUrl = environment.apiUrl;
-
     this.userSource = new BehaviorSubject<User | null>(
       this.getUserFromLocalStorage()
     );
-
     this.user$ = this.userSource.asObservable();
   }
 
-  private getUserFromLocalStorage(): User | null {
+  private getUserFromLocalStorage(): User {
     const userStr = localStorage.getItem('user');
     const user = userStr != null ? JSON.parse(userStr) : null;
     return user;
@@ -78,14 +76,11 @@ export class AuthenticationService {
       )
       .pipe(
         map((res) => {
-          const user = new User();
+          let user = new User();
 
           if (res?.accessToken) {
-            user.token = res.accessToken;
-            user.email = res.user.email;
-            user.id = res.user.id;
+            user = { ...res.user, token: res.user.token };
             this.userSource.next(user);
-            console.log(user);
           }
 
           return user;
@@ -95,5 +90,10 @@ export class AuthenticationService {
           if (remember) localStorage.setItem('user', JSON.stringify(user));
         })
       );
+  }
+
+  logout() {
+    localStorage.removeItem('user');
+    this.userSource.next(null);
   }
 }
