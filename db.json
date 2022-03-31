@@ -1,28 +1,31 @@
 {
   "users": [
     {
-      "email": "a.contreras@mail.com",
-      "password": "$2a$10$pbjNmIIzW3cQfpodxSxtN.G8.73HG6yT6Cn80Ej59Jhn3HNRt1UYy",
+      "email": "admin@mail.com",
+      "password": "$2a$10$qwjRYhAI9rH273JxD6jivOQ1LQUO0bbOv4MgaPCcRMlAFXuM9b1Xa",
       "firstname": "Agustin",
       "lastname": "Contreras",
       "role": "admin",
+      "age": 28,
       "id": 1
     },
     {
       "email": "u.contreras@mail.com",
-      "password": "$2a$10$JhA478Gfjxb/tLqRTRv7c.9cAYkMrbfXp9WYSNMGn9cHU0sKI/RGK",
+      "password": "$2a$10$ld24RQYNkLNM88W09y8iZeH1a1ksFvQIt689VyQKR6/OWlno0Piyq",
       "firstname": "Ulises",
       "lastname": "Contreras",
       "role": "user",
-      "id": 2
+      "id": 2,
+      "age": "2"
     },
     {
       "email": "w.contreras@mail.com",
-      "password": "$2a$10$A.wZYuJ1IXb.vddcIN1nqesuRic41AxX4KYxJ8s0guqboaxP4xLOO",
+      "password": "$2a$10$wDwz54qBmBvUWSG5tMebV.PEAgg8UuHAPtglNXegR03Gj4xfXqOna",
       "firstname": "Wilson",
       "lastname": "Contreras",
       "role": "user",
-      "id": 3
+      "id": 3,
+      "age": "12"
     },
     {
       "email": "test@test.com",
