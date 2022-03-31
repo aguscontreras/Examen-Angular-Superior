@@ -18,11 +18,19 @@
     },
     {
       "email": "w.contreras@mail.com",
-      "password": "$2a$10$dRyTPuf8zG5dcDUJMpEnhOM7ngE6GoCmQoQ.7iwzb/lELCB1C8D8a",
+      "password": "$2a$10$A.wZYuJ1IXb.vddcIN1nqesuRic41AxX4KYxJ8s0guqboaxP4xLOO",
       "firstname": "Wilson",
       "lastname": "Contreras",
       "role": "user",
       "id": 3
+    },
+    {
+      "email": "test@test.com",
+      "password": "$2a$10$PKgky.JrfF9vgymNp1DYNuPVbJYSitowJ5Dn.RhmVcpLLgY2bw.kG",
+      "firstname": "Test",
+      "lastname": "User",
+      "role": "user",
+      "id": 4
     }
   ]
 }
