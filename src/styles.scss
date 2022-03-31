@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.frontpage-illustration {
+  &__wrapper {
+    display: flex;
+  }
+}
+
+.frontpage-illustration {
+  max-width: 80%;
+}
+
+.field-full-width {
+  width: 100%;
+}
