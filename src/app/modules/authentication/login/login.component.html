@@ -1,0 +1,39 @@
+<main class="row">
+  <section class="col-lg-5">
+    <div class="d-none d-lg-flex justify-content-center pt-5">
+      <img
+        src="assets/img/login.svg"
+        alt="Ilustración: login"
+        class="frontpage-illustration"
+      />
+    </div>
+  </section>
+  <section class="col-lg-4 offset-lg-1 pt-5 pt-lg-5">
+    <h1 class="mat-display-3">Bienvenido/a</h1>
+    <h3>Por favor, inicie sesión para continuar.</h3>
+
+    <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="field-full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" />
+        <mat-error *ngIf="f['email'].invalid"
+          >Este campo es requerido.</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field class="field-full-width" appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input matInput type="password" formControlName="password" />
+        <mat-error *ngIf="f['password'].invalid"
+          >Este campo es requerido.</mat-error
+        >
+      </mat-form-field>
+
+      <p><mat-checkbox formControlName="remember">Recordarme</mat-checkbox></p>
+
+      <button mat-flat-button type="submit" color="primary" class="mt-4">
+        Ingresar al sitio
+      </button>
+    </form>
+  </section>
+</main>
