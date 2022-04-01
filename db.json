@@ -34,6 +34,52 @@
       "lastname": "User",
       "role": "user",
       "id": 4
+    },
+    {
+      "email": "test@mail.com.ar",
+      "password": "$2a$10$IYDuk8y9ldTQKWGFQs5x8e3wmXzLN7g.ctTM3OQ8AkzNM2F5rGTjq",
+      "username": "TestingUser1",
+      "id": 5
+    },
+    {
+      "email": "test@mail.com",
+      "password": "$2a$10$bNSfedm9lqByjDURi0brLOxnA.vlJpm3P8LqiqmEzPHisOEbbPuMu",
+      "username": "TestingUser2",
+      "firstname": "Test",
+      "lastname": "User",
+      "age": 22,
+      "role": "user",
+      "id": 6
+    },
+    {
+      "email": "test@user.com.ar",
+      "password": "$2a$10$D0unGHa7u4JfY8LPlmmZjuUJGP3Izh.ZK1cOnyzEylgqpjAw2iJl2",
+      "username": "TestingUser3",
+      "firstname": "Test",
+      "lastname": "User",
+      "age": 23,
+      "role": "user",
+      "id": 7
+    },
+    {
+      "email": "test@mail.com22",
+      "password": "$2a$10$wAJUDrbfz2l57Lnynb1KcOe7wkLU4.nRbpFRHHwp4cGfH3RWOPyNW",
+      "username": "TestingUser2",
+      "firstname": "Test",
+      "lastname": "User",
+      "age": 23,
+      "role": "user",
+      "id": 8
+    },
+    {
+      "email": "test@mdsadas.com",
+      "password": "$2a$10$lS28cFBHORghKi84AQwYaeJaGTONNlPyJxnWobgtwmN1NF6oRkCbS",
+      "username": "Testa321",
+      "firstname": "dsadsa",
+      "lastname": "sadsa",
+      "age": 12,
+      "role": "user",
+      "id": 9
     }
   ]
 }

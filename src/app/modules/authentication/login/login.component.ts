@@ -14,6 +14,7 @@ import { User } from '../../../models';
 export class LoginComponent implements OnInit, OnDestroy {
   private user: User | null;
   loginForm: FormGroup;
+
   get f() {
     return this.loginForm.controls;
   }
@@ -54,6 +55,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   onSubmit(): void {
     if (this.loginForm.invalid) return;
+
     const { email, password, remember } = this.loginForm.value;
 
     this.authenticationService

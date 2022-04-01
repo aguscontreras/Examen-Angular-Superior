@@ -36,7 +36,7 @@ export class AuthenticationService {
     return this.userSource.getValue();
   }
 
-  registerNewUser(user: User): Observable<User> {
+  registerNewUser(user: Partial<User>): Observable<User> {
     return this.http
       .post<{ accessToken: string; user: User }>(
         `${this.apiUrl}/register`,
@@ -45,12 +45,13 @@ export class AuthenticationService {
       )
       .pipe(
         map((res) => {
-          const user = new User();
+          let user = new User();
 
           if (res?.accessToken) {
-            user.token = res.accessToken;
-            user.email = res.user.email;
-            user.id = res.user.id;
+            user = { ...res.user, token: res.user.token };
+            setTimeout(() => {
+              this.userSource.next(user);
+            }, 4000);
           }
 
           return user;

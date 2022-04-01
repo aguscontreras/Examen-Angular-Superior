@@ -6,7 +6,6 @@ import { AuthenticationService } from '../../../services/authentication.service'
 @Component({
   selector: 'app-user-dashboard',
   templateUrl: './user-dashboard.component.html',
-  styleUrls: ['./user-dashboard.component.scss'],
 })
 export class UserDashboardComponent implements OnInit {
   user$: Observable<User | null>;

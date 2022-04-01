@@ -6,7 +6,6 @@ import { Role } from '../../../models';
 @Component({
   selector: 'app-form-dashboard',
   templateUrl: './form-dashboard.component.html',
-  styleUrls: ['./form-dashboard.component.scss'],
 })
 export class FormDashboardComponent implements OnInit {
   @Input() set loggedUser(user: User | null) {
@@ -24,7 +23,7 @@ export class FormDashboardComponent implements OnInit {
     this.form = this.fb.group({
       lastname: ['', Validators.required],
       firstname: ['', Validators.required],
-      age: ['', [Validators.required, Validators.min(18), Validators.max(100)]],
+      age: ['', [Validators.required, Validators.min(12), Validators.max(100)]],
       email: ['', [Validators.required, Validators.email]],
       password: [null],
       role: [

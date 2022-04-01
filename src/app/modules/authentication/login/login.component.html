@@ -16,22 +16,33 @@
       <mat-form-field class="field-full-width" appearance="outline">
         <mat-label>Email</mat-label>
         <input matInput type="email" formControlName="email" />
-        <mat-error *ngIf="f['email'].invalid"
-          >Este campo es requerido.</mat-error
-        >
+        <mat-error *ngIf="f['email'].invalid">
+          Este campo es requerido.
+        </mat-error>
       </mat-form-field>
 
       <mat-form-field class="field-full-width" appearance="outline">
         <mat-label>Contraseña</mat-label>
-        <input matInput type="password" formControlName="password" />
-        <mat-error *ngIf="f['password'].invalid"
-          >Este campo es requerido.</mat-error
+        <input #pwrd matInput type="password" formControlName="password" />
+        <mat-error *ngIf="f['password'].invalid">
+          Este campo es requerido.
+        </mat-error>
+        <button
+          matSuffix
+          mat-icon-button
+          type="button"
+          (click)="pwrd.type = pwrd.type === 'password' ? 'text' : 'password'"
         >
+          <mat-icon>visibility</mat-icon>
+        </button>
       </mat-form-field>
 
       <p><mat-checkbox formControlName="remember">Recordarme</mat-checkbox></p>
 
-      <p>¿No estás registrado/a? <a [routerLink]="['/auth/signup']">Creá una cuenta</a></p>
+      <p>
+        ¿No estás registrado/a?
+        <a [routerLink]="['/auth/signup']">Creá una cuenta</a>
+      </p>
 
       <button mat-flat-button type="submit" color="primary" class="mt-4">
         Ingresar al sitio
