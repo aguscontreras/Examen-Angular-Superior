@@ -9,8 +9,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 const materialModules = [
+  MatFormFieldModule,
   MatInputModule,
   MatCheckboxModule,
   MatButtonModule,

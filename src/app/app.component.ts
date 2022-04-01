@@ -9,7 +9,6 @@ import { AuthenticationService } from './services/authentication.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'Examen-Angular-Superior';
   user$: Observable<User | null>;
   constructor(private readonly authenticationService: AuthenticationService) {
     this.user$ = this.authenticationService.user$;

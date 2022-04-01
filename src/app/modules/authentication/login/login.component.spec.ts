@@ -1,4 +1,9 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { AppRoutingModule } from '../../../app-routing.module';
 
 import { LoginComponent } from './login.component';
 
@@ -8,9 +13,15 @@ describe('LoginComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
-    })
-    .compileComponents();
+      declarations: [LoginComponent],
+      imports: [
+        HttpClientModule,
+        ReactiveFormsModule,
+        AppRoutingModule,
+        MatSnackBarModule,
+        MatCheckboxModule,
+      ],
+    }).compileComponents();
   });
 
   beforeEach(() => {
